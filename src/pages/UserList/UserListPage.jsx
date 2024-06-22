@@ -4,7 +4,9 @@ import { useInfoGetter } from '../../utils/useInfoGetter'
 
 export default function UsersListPage() {
   
-    const [usersInfo, usersTodos, usersAlbums] = useInfoGetter()
+    const usersInfo= useInfoGetter()
+    const usersTodos= useInfoGetter("https://jsonplaceholder.typicode.com/todos")
+    const usersAlbums= useInfoGetter("https://jsonplaceholder.typicode.com/albums")
 
     return (
         <UserList 
