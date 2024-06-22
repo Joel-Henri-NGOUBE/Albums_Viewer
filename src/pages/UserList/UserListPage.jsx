@@ -9,10 +9,14 @@ export default function UsersListPage() {
     const usersAlbums= useInfoGetter("https://jsonplaceholder.typicode.com/albums")
 
     return (
-        <UserList 
-        usersInfo={usersInfo}
-        usersTodos={usersTodos}
-        usersAlbums={usersAlbums}
-      />
+      <div className="page">
+        <div className="page-container">
+          <UserList 
+          usersInfo={usersInfo}
+          usersTodos={usersTodos}
+          usersAlbums={usersAlbums}
+          />
+        </div>
+      </div>
     )
 }

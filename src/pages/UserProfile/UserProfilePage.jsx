@@ -11,19 +11,20 @@ export default function UserProfilePage() {
     const userAlbums = useInfoGetter(`https://jsonplaceholder.typicode.com/users/${id}/albums`)
     
     return (
-        <>
-            <div>
-                <Link to="/users">Users</Link>
+        <div className="page">
+            <div className="page-container">
+                <div>
+                    <Link to="/users">Users</Link>
+                </div>
+                <p>Name: {userInfo.name}</p>
+                <p>Username: {userInfo.username}</p>
+                <p>Email: {userInfo.email}</p>
+                
+                <Albums 
+                userAlbums={userAlbums}
+                id={id}
+                />
             </div>
-            <p>Name: {userInfo.name}</p>
-            <p>Username: {userInfo.username}</p>
-            <p>Email: {userInfo.email}</p>
-            
-            <Albums 
-            userAlbums={userAlbums}
-            id={id}
-        />
-        
-        </>
+        </div>
     )
 }

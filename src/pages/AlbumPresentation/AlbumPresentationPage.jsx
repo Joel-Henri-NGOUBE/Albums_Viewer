@@ -12,9 +12,11 @@ export default function AlbumPresentationPage() {
 
   return (
     <div className="page">
+      <div className="page-container">
         <Link to={`/user/profile/${id}`}>Profil</Link>
         <p>{userAlbum.title}</p>
         <Mosaic userAlbumPics={userAlbumPics} />
+      </div>
     </div>
   )
 }
