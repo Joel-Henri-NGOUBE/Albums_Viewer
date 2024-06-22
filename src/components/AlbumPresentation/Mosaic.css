@@ -1,0 +1,16 @@
+.mosaic{
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    /* height: max-content; */
+}
+
+.mosaic > *{
+    width: 10%;
+    height: max-content;
+    display: flex;
+}
+
+img{
+    width:100%;
+}
