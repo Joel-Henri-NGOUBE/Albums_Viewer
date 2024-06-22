@@ -1,19 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function UserProfile({userInfo, userAlbums, id}) {
+export default function Albums({ userAlbums, id }) {
   return (
     <div>
-        {/* {console.log(userInfo,userAlbums)} */}
         <div>
-            <Link to="/users">Users</Link>
-        </div>
-        <p>Nom: {userInfo.name}</p>
-        <p>Pseudonyme: {userInfo.username}</p>
-        <p>Email: {userInfo.email}</p>
-        <div>
+            <p>Yours albums:</p>
             <ul>
-                {/* {userAlbums} */}
                 {userAlbums[0] && userAlbums.map((album) => 
                     <li>
                         <Link to={`/user/${id}/albums/${album.id}`}>

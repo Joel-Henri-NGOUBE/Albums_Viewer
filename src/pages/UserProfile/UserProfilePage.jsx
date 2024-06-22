@@ -1,7 +1,7 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useInfoGetter } from '../../utils/useInfoGetter'
-import UserProfile from '../../components/UserProfile/UserProfile'
+import Albums from '../../components/UserProfile/Albums'
 
 export default function UserProfilePage() {
     
@@ -9,16 +9,21 @@ export default function UserProfilePage() {
 
     const userInfo = useInfoGetter(`https://jsonplaceholder.typicode.com/users/${id}`)
     const userAlbums = useInfoGetter(`https://jsonplaceholder.typicode.com/users/${id}/albums`)
-    // const userAlbums = useInfoGetter("https://jsonplaceholder.typicode.com/users")
     
-
     return (
         <>
-        <UserProfile 
-        userInfo={userInfo}
-        userAlbums={userAlbums}
-        id={id}
+            <div>
+                <Link to="/users">Users</Link>
+            </div>
+            <p>Name: {userInfo.name}</p>
+            <p>Username: {userInfo.username}</p>
+            <p>Email: {userInfo.email}</p>
+            
+            <Albums 
+            userAlbums={userAlbums}
+            id={id}
         />
+        
         </>
     )
 }
