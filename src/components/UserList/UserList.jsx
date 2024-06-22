@@ -19,7 +19,7 @@ export default function UserList({usersInfo, usersTodos, usersAlbums}) {
             <tbody>
                 {
                     usersInfo.map((user) => 
-                    <tr index={user.id}>
+                    <tr key={user.id}>
                         <td><Link to={`/user/profile/${user.id}`}>{user.username}</Link></td>
                         <td>{user.email}</td>
                         <td><a href={`http://${user.website}`} target="_blank">{user.website}</a></td>

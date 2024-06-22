@@ -68,3 +68,9 @@ a:visited{
   text-decoration: none;
   color: var(--paper-blue);
 }
+
+@media screen and (max-width: 700px) {
+  .page-container{
+    align-items: flex-start;
+  }
+}
