@@ -13,7 +13,7 @@ export default function UserProfile({userInfo, userAlbums, id}) {
                 {/* {userAlbums} */}
                 {userAlbums[0] && userAlbums.map((album) => 
                     <li>
-                        <Link to={`/user/albums/${id}`}>
+                        <Link to={`/user/albums/${album.id}`}>
                             <div>{album.title}</div>
                         </Link>
                     </li>
