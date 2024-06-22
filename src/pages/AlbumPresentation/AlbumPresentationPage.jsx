@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { useMediaGetter } from '../../utils/useInfoGetter'
-import { useParams } from 'react-router-dom'
+import { useInfoGetter } from '../../utils/useInfoGetter'
+import { Link, useParams } from 'react-router-dom'
 
 export default function AlbumPresentationPage() {
   
-  const {id} = useParams()
+  const {id, idAlbum} = useParams()
 
-  const userAlbumsPics = useMediaGetter(id)  
+  const userAlbumsPics = useInfoGetter(`https://jsonplaceholder.typicode.com/photos?albumId=${idAlbum}`)  
 
   return (
-    <div>{userAlbumsPics.map((picture) => <div style={{display: 'flex', flexFlow: 'row wrap'}}><p>{picture.albumId}</p><img src={picture.thumbnailUrl} alt="image"/></div>)}</div>
+    <div>
+      <Link to={`/user/profile/${id}`}>Profil</Link>
+      {userAlbumsPics.map((picture) => <div style={{display: 'flex', flexFlow: 'row wrap'}}><p>{picture.albumId}</p><img src={picture.thumbnailUrl} alt="image"/></div>)}</div>
   )
 }
