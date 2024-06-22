@@ -11,11 +11,11 @@ export default function UsersListPage() {
     return (
       <div className="page">
         <div className="page-container">
-          <UserList 
-          usersInfo={usersInfo}
-          usersTodos={usersTodos}
-          usersAlbums={usersAlbums}
-          />
+            <UserList 
+            usersInfo={usersInfo}
+            usersTodos={usersTodos}
+            usersAlbums={usersAlbums}
+            />
         </div>
       </div>
     )

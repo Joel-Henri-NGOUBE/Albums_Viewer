@@ -1,0 +1,6 @@
+.page-container > div > p{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+

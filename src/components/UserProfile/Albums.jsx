@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./Albums.css"
 
 export default function Albums({ userAlbums, id }) {
   return (
-    <div>
-        <div>
+        <div className="album">
             <p>Yours albums:</p>
             <ul>
                 {userAlbums[0] && userAlbums.map((album) => 
@@ -16,6 +16,5 @@ export default function Albums({ userAlbums, id }) {
                 )}
             </ul>
         </div>
-    </div>
   )
 }

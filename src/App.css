@@ -50,7 +50,13 @@ body{
   background: white;
   padding: 30px;
   overflow: auto;
+  position: relative;
+}
 
+#before{
+  position: absolute;
+  left: 50px;
+  top: 50px;
 }
 
 a{

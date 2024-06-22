@@ -1,0 +1,32 @@
+ul{
+    list-style-image: url("/album.png");
+    /* list-style-: center; */
+}
+
+li{
+    line-height: 2rem;
+    margin: 4px 0;
+}
+
+li > *{
+    position: relative;
+    bottom: 5px;
+}
+
+.album{
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container > .album > p{
+    display: block;
+    margin-top: 50px;
+    padding: 10px 0;
+    /* align-self: center; */
+    text-align: center;
+}
+
+p > span:nth-child(2){
+    color: rgb(18, 66, 122);
+    font-weight: 500;
+}
